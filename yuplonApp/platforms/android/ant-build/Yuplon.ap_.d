@@ -42,7 +42,9 @@ C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\spec \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\spec.html \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\css\index.css \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\css\reset.css \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\img\logo.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\img\screen-xhdpi-portrait.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\index.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen \
@@ -58,6 +60,10 @@ C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android\ic
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android\icon-48-mdpi.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android\icon-72-hdpi.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android\icon-96-xhdpi.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android\launcher_app144x144.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android\launcher_app48x48.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android\launcher_app72x72.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android\launcher_app96x96.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\bada\icon-128.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\bada-wac\icon-48-type5.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\bada-wac\icon-50-type3.png \
@@ -80,6 +86,10 @@ C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\ios \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\tizen \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\webos \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\windows-phone \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\android\bg_320x480.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\android\bg_480x720.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\android\bg_640x960.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\android\bg_960x1440.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\android\screen-hdpi-landscape.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\android\screen-hdpi-portrait.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen\android\screen-ldpi-landscape.png \
