@@ -49,6 +49,7 @@ C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\img\screen-xhdpi-po
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\index.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\lib \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\script.js \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\lib\hammerjs.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\lib\jquery.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen \
