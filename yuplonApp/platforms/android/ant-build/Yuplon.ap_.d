@@ -47,11 +47,13 @@ C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\css\reset.css \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\img\bg_960x1440.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\img\logo.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\img\screen-xhdpi-portrait.png \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\app.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\index.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\lib \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\script.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\lib\hammerjs.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\lib\jquery.js \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\js\lib\mask.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\screen \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\res\icon\android \

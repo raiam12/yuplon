@@ -11,7 +11,7 @@ $(function(){
 				},4000);
 				app.css({'height':mainHeight});
 				var hammertime = Hammer(redimir,{swipe_max_touches:5});
-				hammertime.on("tap",function(){alert("");window.location.href="app.html"});
+				hammertime.on("tap",function(){window.location.href="app.html"});
 				
 			})();
 			

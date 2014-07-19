@@ -51,8 +51,10 @@ body {
     display:inline-block;
 }
 
-h2{
+h2,span{
 	color:#719721;
+	font-size:1.5em;
+	text-transform:initial;
 }
 /* Portrait layout (default) */
 .app {
@@ -63,6 +65,19 @@ h2{
 	height: 100%;
 	float: left;
 }
+
+.scanning{
+	width:33.3333%;
+}
+
+.scan-window {
+	width:300% !important;
+}
+
+.scan {
+	float: right;
+	margin-top: -5%;
+	margin: -5% 2% 0 0;}
 
 .Redimir{
 	position: absolute;
@@ -119,7 +134,7 @@ h2{
 }
 
 h1 {
-    font-size:24px;
+    font-size:1.7em;
     font-weight:normal;
     margin:0px;
     overflow:visible;
@@ -184,6 +199,34 @@ header h1 {
 	-webkit-transition:-webkit-transform 0.5s ease-in;
 	top: 0;
 }
+
+.scanning .inputs{
+	display: inline-block;
+	width: 90%;
+	background: transparent;
+	border: none;
+	padding: 0 5%;
+}
+
+.scanning .inputs input{
+	width: 77%;
+	float: left;
+	line-height: 160%;
+	border-radius: 10px;
+	border: 1px solid #c3c3c3;
+	padding: 3% 3% 3% 20%;
+}
+
+.mask-sharp{
+	position: absolute;
+	left: 10%;
+	line-height: 160%;
+	border-right: 1px groove;
+	padding-right: 2%;
+	font-size: 3em;
+	margin-top:1%;
+}
+
 
 .move{
 -webkit-transform: translate3d(-50%,0,0);}
