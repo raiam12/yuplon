@@ -65,13 +65,17 @@ h2{
 }
 
 .Redimir{
-	position: fixed;
-	bottom: 6%;
+	position: absolute;
+	bottom: 5%;
 	right: 5%;
-	width: 40%;
-	height: 7%;
+	width: 90%;
+	height: 8%;
 	background: #719721;
-	color: #FFF;}
+	color: #FFF;
+	border:none;
+	outline:none;
+	font-size:1.8em;
+}
 
 .Splash{
 	background:url("../img/bg_960x1440.png") no-repeat left  top/100% 100%;
