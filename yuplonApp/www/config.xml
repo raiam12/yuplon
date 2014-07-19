@@ -44,10 +44,10 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <icon src="icon.png" />
     <platform name="android">
-              <icon src="res/android/launcher_app48x48.png" density="ldpi" />
-              <icon src="res/android/launcher_app72x72.png" density="mdpi" />
-              <icon src="res/android/launcher_app96x96.png" density="hdpi" />
-              <icon src="res/android/launcher_app144x144.png" density="xhdpi" />
+              <icon src="www/res/icon/android/launcher_app48x48.png" density="ldpi" />
+              <icon src="www/res/icon/android/launcher_app72x72.png" density="mdpi" />
+              <icon src="www/res/icon/android/launcher_app96x96.png" density="hdpi" />
+              <icon src="www/res/icon/android/launcher_app144x144.png" density="xhdpi" />
      </platform>
     <icon gap:platform="blackberry" src="res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="res/icon/blackberry/icon-80.png" />
@@ -58,10 +58,10 @@
     <icon gap:platform="webos" src="res/icon/webos/icon-64.png" />
     <icon gap:platform="winphone" src="res/icon/windows-phone/icon-48.png" />
     <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
     <gap:splash gap:platform="blackberry" src="res/screen/blackberry/screen-225.png" />
     <gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
     <gap:splash gap:platform="ios" height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
