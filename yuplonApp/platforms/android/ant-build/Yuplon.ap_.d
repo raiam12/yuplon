@@ -29,6 +29,7 @@ C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-port-xh
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\_where-is-www.txt \
+C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\app.html \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\config.xml \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\cordova.js \
 C:\AndroidApps\yuplon\yuplonApp\platforms\android\assets\www\cordova_plugins.js \
