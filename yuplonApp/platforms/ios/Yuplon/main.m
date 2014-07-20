@@ -17,10 +17,10 @@
  under the License.
  */
 //
-//  main.m
+//  main.m/Users/kevin/Documents/yuplon/yuplonApp/www/app.html
 //  Yuplon
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Created by ___FULLUSERNAME___ on /Users/kevin/Documents/yuplon/yuplonApp/www/app.html___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 //
 
