@@ -71,6 +71,15 @@
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript">
             app.initialize();
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) ){
+                    $('body').addClass("ios");
+               
+            }else if( userAgent.match( /Android/i ) ){
+                    $('body').addClass("android");
+            }else {
+               alert("Not Found");
+            }
         </script>
     </body>
 </html>

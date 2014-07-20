@@ -74,13 +74,17 @@ h2,span{
 	width:300% !important;
 }
 
-.back {
+.android .back{
+    display:none;
+}
+
+.ios .back {
     position: absolute;
     top: 1.5em;
     left: 1.4em;
 }
 
-.back:after {
+.ios .back:after {
     border: 3px solid #719721;
     border-right: 3px solid transparent;
     border-top: 3px solid transparent;
