@@ -66,7 +66,7 @@ h2,span{
 	float: left;
 }
 
-.scanning{
+.scanning, .view-window{
 	width:33.3333%;
 }
 
@@ -74,12 +74,36 @@ h2,span{
 	width:300% !important;
 }
 
+.android .back{
+    display:none;
+}
+
+.ios .back {
+    position: absolute;
+    top: 1.5em;
+    left: 1.4em;
+}
+
+.ios .back:after {
+    border: 3px solid #719721;
+    border-right: 3px solid transparent;
+    border-top: 3px solid transparent;
+    content: " ";
+    height: 0.5em;
+    left: -0.7em;
+    position: absolute;
+    top: 0.2em;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 0.5em;
+}
+
 .scan {
 	float: right;
 	margin-top: -5%;
 	margin: -5% 2% 0 0;}
 
-.Redimir{
+.Redimir, .RedimirNuevo{
 	position: absolute;
 	bottom: 5%;
 	right: 5%;
@@ -105,11 +129,17 @@ h2,span{
 	text-align:center;
 	margin-top: 30%;
 }
-.inputs{
+.inputs, .comprobantes ul{
 	margin	: 8% 0 0;
 	background:#FFF;
 	border-top: 1px groove #D7D7D7;
 	border-bottom: 1px groove #D7D7D7;
+}
+.comprobantes li {
+    width:50%;
+    height:1em;
+    font-size:1.5em;
+    padding:0.5em;
 }
 .inputs input{
 	border:none;
@@ -168,7 +198,7 @@ header {
 	float: left;}
 
 header h1 {
-	margin-top:6%;
+	margin-top:8%;
 }
 
 .event {
@@ -229,7 +259,12 @@ header h1 {
 
 
 .move{
--webkit-transform: translate3d(-50%,0,0);}
+-webkit-transform: translate3d(-50%,0,0);
+}
+
+.moveApp{
+    -webkit-transform: translate3d(-33.3333%,0,0);
+}
 
 
 @keyframes fade {

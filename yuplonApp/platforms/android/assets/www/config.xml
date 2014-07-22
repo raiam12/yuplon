@@ -19,7 +19,8 @@
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
@@ -42,6 +43,8 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    <preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="3500" />
     <icon src="icon.png" />
     <platform name="android">
               <icon src="www/res/icon/android/launcher_app48x48.png" density="ldpi" />
@@ -51,11 +54,11 @@
      </platform>
     <icon gap:platform="blackberry" src="res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="res/icon/blackberry/icon-80.png" />
-    <icon gap:platform="ios" height="57" src="res/icon/ios/icon-57.png" width="57" />
-    <icon gap:platform="ios" height="72" src="res/icon/ios/icon-72.png" width="72" />
-    <icon gap:platform="ios" height="114" src="res/icon/ios/icon-57-2x.png" width="114" />
-    <icon gap:platform="ios" height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
-    <icon gap:platform="webos" src="res/icon/webos/icon-64.png" />
+    <icon gap:platform="ios" height="57" src="res/icon/ios/icon-48x48.png" width="57" />
+    <icon gap:platform="ios" height="72" src="res/icon/ios/icon-72x72.png" width="72" />
+    <icon gap:platform="ios" height="114" src="res/icon/ios/icon-96x96.png" width="114" />
+    <icon gap:platform="ios" height="144" src="res/icon/ios/icon-144x144.png" width="144" />
+    <icon gap:platform="webos" src="res/icon/webos/icon-48x48.png" />
     <icon gap:platform="winphone" src="res/icon/windows-phone/icon-48.png" />
     <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />

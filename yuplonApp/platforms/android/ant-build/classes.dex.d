@@ -1,9 +1,9 @@
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\classes.dex : \
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\BuildConfig.class \
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R$attr.class \
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R$drawable.class \
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R$string.class \
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R$xml.class \
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R.class \
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\Yuplon.class \
-C:\AndroidApps\yuplon\yuplonApp\platforms\android\ant-build\dexedLibs\classes-7d5070cbd53a344b6665e687e3982856.jar \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\classes.dex : \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\BuildConfig.class \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R$attr.class \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R$drawable.class \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R$string.class \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R$xml.class \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\R.class \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\classes\com\nacion\yuplon\Yuplon.class \
+C:\AndroidApps\yuplonNewBranch\yuplon\yuplonApp\platforms\android\ant-build\dexedLibs\classes-a79792ecbfb9b0478e17b0d43c402305.jar \
