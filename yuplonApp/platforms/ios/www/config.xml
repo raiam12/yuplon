@@ -43,6 +43,8 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    <preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="3500" />
     <icon src="icon.png" />
     <platform name="android">
               <icon src="www/res/icon/android/launcher_app48x48.png" density="ldpi" />
