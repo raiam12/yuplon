@@ -61,7 +61,11 @@ $(
 				    dataType: 'jsonp',
 				    jsonpCallback:'callback',
 				    beforeSend:function(){loading.show();},
-				    complete:function(){loading.hide();},
+				    complete:function(){
+                       loading.hide();
+                       var LoginObj = {"user":user.val(),"pass":pass.val()};
+                       window.localStorage.setItem("LoginData",JSON.stringify(LoginObj));
+                    },
 				    success: function(e) { self.validateLogin(e)},
 				    error: function(jqXHR, textStatus, errorThrown ) { console.debug(jqXHR);console.debug(errorThrown); }
 				});

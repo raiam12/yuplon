@@ -66,7 +66,7 @@ h2,span{
 	float: left;
 }
 
-.scanning, .view-window, .menu-window{
+.scanning, .view-window, .menu-window,.user-window,.support-window{
 	width:33.3333%;
 }
 
@@ -78,7 +78,7 @@ h2,span{
     display:none;
 }
 
-.ios .back {
+.ios .back , .ios .backMenu{
     position: absolute;
     top: 1.5em;
     left: 1.4em;
@@ -107,7 +107,7 @@ h2,span{
     -webkit-mask-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><rect x="25.833" y="20" width="64.167" height="7.666"/><rect x="25.833" y="46.136" width="64.167" height="7.667"/><rect x="25.833" y="72.271" width="64.167" height="7.666"/><rect x="9.833" y="20" width="7.667" height="7.666"/><rect x="9.833" y="46" width="7.667" height="7.666"/><rect x="9.833" y="72.271" width="7.667" height="7.666"/></svg>');
 }
 
-.ios .back:after {
+.ios .back:after, .ios .backMenu:after{
     border: 3px solid #719721;
     border-right: 3px solid transparent;
     border-top: 3px solid transparent;
@@ -171,6 +171,11 @@ h2,span{
     padding:1em;
     text-align:left;
     position:relative;
+}
+
+.menu-list li.user, .menu-list li.pass {
+    height:1.3em;
+    color:gray;
 }
 .menu-list li span {
     font-size:1em;
