@@ -72,7 +72,12 @@ C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\res\values-zh-rTW\st
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\res\xml\config.xml \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\res\xml\preferences.xml \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable\icon.png \
+C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable\launcher_icon.png \
+C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable\share_via_barcode.png \
+C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable\shopper_icon.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-hdpi\icon.png \
+C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-hdpi\launcher_icon.png \
+C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-hdpi\shopper_icon.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-land-hdpi\screen.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-land-ldpi\screen.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-land-mdpi\screen.png \
@@ -84,4 +89,6 @@ C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawab
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-port-mdpi\screen.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-port-xhdpi\screen.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
+C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-xhdpi\launcher_icon.png \
+C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\res\drawable-xxhdpi\launcher_icon.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\ant-build\AndroidManifest.xml \

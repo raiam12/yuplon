@@ -110,6 +110,7 @@ C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\assets\www\spec.html
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\assets\www\css\index.css \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\assets\www\css\reset.css \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\assets\www\img\bg_960x1440.png \
+C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\assets\www\img\loader.gif \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\assets\www\img\logo.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\assets\www\img\screen-xhdpi-portrait.png \
 C:\AndroidApps\yuplon3.0\yuplon\yuplonApp\platforms\android\assets\www\js\app.js \
