@@ -1,29 +1,50 @@
 $(function(){
-		(function($,dom){
-			var mainHeight =$(dom).height()
-				app = $(".app"),
-				container = $(".containerIndex"),
-				redimir = $(".Redimir")[0],
+        (function($,dom){
+      document.addEventListener("touchstart",function(){},false);
+            var mainHeight =$(dom).height()
+                        app = $(".app"),
+                        container = $(".containerIndex"),
+                        redimir = $(".Redimir")[0],
                 backButton = $(".back")[0],
-                maskElem = $(".mask");
-				
-			bindEvents =(function(){
-				app.css({'height':mainHeight});
-				$('.mask').mask('ZZ-ZZZZZ-ZZZ-ZZ',{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
-				var red = Hammer(redimir,{swipe_max_touches:5}),
-                         back = Hammer(backButton,{swipe_max_touches:5});
-				red.on("tap",function(){
+                scanButton = $(".scan")[0];
+                maskElem = $(".mask"),
+                goToMenu = $(".RedimirNuevo")[0];
+                
+            bindEvents =(function(){
+                app.css({'height':mainHeight});
+                $('.mask').mask('ZZ-ZZZZZ-ZZZ-ZZ',{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
+                var red = Hammer(redimir,{swipe_max_touches:5}),
+                    back = Hammer(backButton,{swipe_max_touches:5}),
+                    goMenu = Hammer(goToMenu,{swipe_max_touches:5}),
+                    scan = Hammer(scanButton,{swipe_max_touches:5});
+
+                red.on("tap",function(){
                        validateComp(maskElem.val(),container);
                 });
                 back.on("tap",function(){
-                        setTimeout(function(){
-                            container.css("-webkit-transform","translate3d(0,0,0)");
-                        },100);
+                        container.css("-webkit-transform","translate3d(0,0,0)");
                 });
-                         
-                
-				
-			})();
+                goMenu.on("tap",function(){
+                        container.css("-webkit-transform","translate3d(-66.6666%,0,0)");
+                });
+                scan.on("tap",function(){
+                        cordova.plugins.barcodeScanner.scan(
+                          function (result) {
+                            $('.mask').val(result.text);
+                            $('.mask').mask('ZZ-ZZZZZ-ZZZ-ZZ',{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
+                            
+                             /* alert("We got a barcode\n" +
+                                    "Result: " + result.text + "\n" +
+                                    "Format: " + result.format + "\n" +
+                                    "Cancelled: " + result.cancelled);*/
+                          }, 
+                          function (error) {
+                              alert("Hubo un problema al escanear");
+                          }
+                       );
+
+                }); 
+            })();
          
             function validateComp(val,elem) {
          
@@ -39,7 +60,11 @@ $(function(){
          
             }
          
-			
-		})(jQuery, document);
+            function moveScreen(val){
+                container.css("-webkit-transform","translate3d('" +val+ "'%,0,0)");
+            }
+         
+            
+        })(jQuery, document);
 });
 
