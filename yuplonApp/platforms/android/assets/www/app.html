@@ -31,17 +31,18 @@
         <script type="text/javascript" src="js/lib/jquery.js"></script>
         <script type="text/javascript" src="js/lib/hammerjs.js"></script>
         <script type="text/javascript" src="js/lib/mask.js"></script>
-        <title>Hello World</title>
+        <title>Yuplon</title>
     </head>
     <body>
 	    <div class="containerIndex scan-window">
 	    	<div class="app scanning">
 	        	<header class="Menu">
 	        		<h1>Comprobantes</h1>
+                    <span class="menu-button"></span>
 	        		<span class="scan">Escanear</span>
 	        	</header>
 	            <div class="login">
-	            	<h2>Ingrese el numero de comprobante</h2>
+	            	<h2>Ingrese el número de comprobante</h2>
 	            	<div class="inputs">
 	            		<span class="mask-sharp">#</span>
 	            		<input type="text" class="mask"/>
@@ -49,21 +50,6 @@
 	        	</div>
 	        	<button class="Redimir">Redimir Comprobante</button>
         	</div>
-            <div class="app view-window">
-                    <header class="Menu">
-                        <h1>Comprobantes</h1>
-                        <span class="back">Atrás</span>
-                    </header>
-                    <div class="login">
-                        <h2>Ingrese el numero de comprobante</h2>
-                        <div class="comprobantes">
-                            <ul>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button class="RedimirNuevo">Redimir Comprobante</button>
-            </div>
             <div class="app menu-window">
                 <header class="Menu">
                     <h1>Menú</h1>
@@ -95,7 +81,7 @@
             }else if( userAgent.match( /Android/i ) ){
                     $('body').addClass("android");
             }else {
-               alert("Not Found");
+               console.log("Not Found");
             }
         </script>
     </body>
