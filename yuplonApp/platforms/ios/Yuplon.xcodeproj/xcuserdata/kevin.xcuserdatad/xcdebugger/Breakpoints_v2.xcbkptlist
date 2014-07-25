@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../www/js/app.js"
-            timestampString = "427868821.941046"
+            timestampString = "428008914.118835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24">
+            startingLineNumber = "26"
+            endingLineNumber = "26">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../www/js/app.js"
-            timestampString = "427868677.769042"
+            timestampString = "428008914.118835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26">
+            startingLineNumber = "28"
+            endingLineNumber = "28">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
