@@ -6,12 +6,20 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.barcodeScanner"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
+        "id": "org.apache.cordova.dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.phonegap.plugins.barcodescanner": "1.2.0"
+    "com.phonegap.plugins.barcodescanner": "1.2.0",
+    "org.apache.cordova.dialogs": "0.2.9-dev"
 }
 // BOTTOM OF METADATA
 });

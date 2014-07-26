@@ -22,6 +22,9 @@
     <feature name="BarcodeScanner">
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <name>Yuplon</name>
     <description>
         Hello World sample application that responds to the deviceready event.

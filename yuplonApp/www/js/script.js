@@ -87,7 +87,12 @@ $(
                   'Error',            // title
                   'Aceptar'                  // buttonName
               );*/
-          alert("Los datos no son correctos!");
+        navigator.notification.alert(
+            'Los datos no son correctos',  // message
+            null,         // callback
+            'Error',            // title
+            'Aceptar'                  // buttonName
+        );
         } else {
           window.location.href="app.html"
         }

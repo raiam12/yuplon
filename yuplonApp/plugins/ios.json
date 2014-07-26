@@ -36,6 +36,12 @@
                             "xml": "false",
                             "count": 1
                         }
+                    ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -45,6 +51,10 @@
                         {
                             "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -53,6 +63,9 @@
     },
     "installed_plugins": {
         "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "com.nacion.yuplon"
+        },
+        "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.nacion.yuplon"
         }
     },
