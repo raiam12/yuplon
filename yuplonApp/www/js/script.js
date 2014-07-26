@@ -25,6 +25,14 @@ $(
         pass = $(".Password"),
         loading = $(".loading");
 
+      var data = null;
+
+      if(window.localStorage.getItem("LoginData") !== null){
+        data = JSON.parse(window.localStorage.getItem("LoginData"));
+        user.val(data.user);
+        pass.val(data.pass);
+      }
+
       /**
        * Bind DOM events
        */   
@@ -42,12 +50,12 @@ $(
         app.css({'height':mainHeight});
         hammertime.on("tap",function(){
           if(user.val() === "" || pass.val() === ""){
-            /*navigator.notification.alert(
-                    'Ingrese todos los datos',  // message
-                    'Error',            // title
-                    'Aceptar'                  // buttonName
-                );*/
-            alert("Debes ingresar todos los datos!");
+            navigator.notification.alert(
+              'Debes de ingresar todos los datos!',  // message
+              null,         // callback
+              'Error',            // title
+              'Aceptar'                  // buttonName
+          );
           } else {
             self.makeAjaxCall();
           }         
@@ -69,11 +77,7 @@ $(
             jsonpCallback:'callback',
             beforeSend:function(){loading.show();},
             complete:function(){
-               var obj = {"user":user.val(),"pass":pass.val()};
-               window.localStorage.setItem("LoginData",JSON.stringify(obj));
                loading.hide();
-               
-               
             },
             success: function(e) { self.validateLogin(e)},
             error: function(jqXHR, textStatus, errorThrown ) { console.debug(jqXHR);console.debug(errorThrown); }
@@ -88,18 +92,15 @@ $(
         var json = JSON.stringify(data[0]);
         var status = JSON.parse(json);
         if(status.id === undefined){
-          /*navigator.notification.alert(
-                  'Los datos no son correctos!',  // message
-                  'Error',            // title
-                  'Aceptar'                  // buttonName
-              );*/
-        navigator.notification.alert(
-            'Los datos no son correctos',  // message
-            null,         // callback
-            'Error',            // title
-            'Aceptar'                  // buttonName
-        );
+          navigator.notification.alert(
+              'Los datos no son correctos',  // message
+              null,         // callback
+              'Error',            // title
+              'Aceptar'                  // buttonName
+          );
         } else {
+          var obj = {"user":user.val(),"pass":pass.val()};
+          window.localStorage.setItem("LoginData",JSON.stringify(obj));
           window.location.href="app.html"
         }
       };
