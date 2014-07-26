@@ -12,7 +12,8 @@ $(function(){
                 goToIndex = $(".Cerrar")[0],
                 backMen = $(".backMenu")[0],
                 gotoUser = $(".menu-list .first")[0],
-                goToSupport = $(".menu-list .last")[0];
+                goToSupport = $(".menu-list .last")[0],
+                backMenuSec = $(".backSupport")[0];
                 
             bindEvents =(function(){
                 app.css({'height':mainHeight});
@@ -23,6 +24,7 @@ $(function(){
                     scan = Hammer(scanButton,{swipe_max_touches:5}),
                     close = Hammer(goToIndex,{swipe_max_touches:5}),
                     men = Hammer(backMen,{swipe_max_touches:5}),
+                    menSec = Hammer(backMenuSec,{swipe_max_touches:5}),
                     user = Hammer(gotoUser,{swipe_max_touches:5}),
                     support = Hammer(goToSupport,{swipe_max_touches:5});
 
@@ -38,13 +40,18 @@ $(function(){
                 men.on("tap",function(){
                         container.css("-webkit-transform","translate3d(-33.3333%,0,0)");
                 });
+                menSec.on("tap",function(){
+                        container.css("-webkit-transform","translate3d(-33.3333%,0,0)");
+                });
                 user.on("tap",function(){
                         var data = JSON.parse(window.localStorage.getItem("LoginData"));
                         $(".user").text(data.user);
+                        $(".user-window").show();
                         container.css("-webkit-transform","translate3d(-66.6666%,0,0)");
                 });
                 support.on("tap",function(){
-                        container.css("-webkit-transform","translate3d(-99.9999%,0,0)");
+                        $(".user-window").hide();
+                        container.css("-webkit-transform","translate3d(-66.6666%,0,0)");
                 });
                 scan.on("tap",function(){
                         cordova.plugins.barcodeScanner.scan(

@@ -66,7 +66,7 @@ h2,span{
 	float: left;
 }
 
-.scanning, .view-window, .menu-window,.user-window,.support-window{
+.scanning, .view-window, .menu-window,.user-window, .support-window{
 	width:33.3333%;
 }
 
