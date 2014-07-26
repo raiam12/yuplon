@@ -68,7 +68,13 @@ $(
             dataType: 'jsonp',
             jsonpCallback:'callback',
             beforeSend:function(){loading.show();},
-            complete:function(){loading.hide();},
+            complete:function(){
+               var obj = {"user":user.val(),"pass":pass.val()};
+               window.localStorage.setItem("LoginData",JSON.stringify(obj));
+               loading.hide();
+               
+               
+            },
             success: function(e) { self.validateLogin(e)},
             error: function(jqXHR, textStatus, errorThrown ) { console.debug(jqXHR);console.debug(errorThrown); }
         });
@@ -90,7 +96,7 @@ $(
         navigator.notification.alert(
             'Los datos no son correctos',  // message
             null,         // callback
-            null,            // title
+            'Error',            // title
             'Aceptar'                  // buttonName
         );
         } else {
