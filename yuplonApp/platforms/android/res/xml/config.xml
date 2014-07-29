@@ -15,12 +15,12 @@
     <icon density="mdpi" src="www/res/icon/android/launcher_app72x72.png" />
     <icon density="hdpi" src="www/res/icon/android/launcher_app96x96.png" />
     <icon density="xhdpi" src="www/res/icon/android/launcher_app144x144.png" />
-    <name>Yuplon</name>
+    <name>Comercios</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Aplicacion para Yuplon Comercios
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+        Smart Solutions S.A.
     </author>
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.5.0" />
