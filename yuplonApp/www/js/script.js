@@ -44,8 +44,6 @@ $(
         /**
          * Event listener for internet connection
          */
-        //document.addEventListener("offline", function(){alert("sin conexion");}, false);
-        //document.addEventListener("online", function(){alert("con conexion");}, false);
         document.addEventListener("backbutton",function(){navigator.app.exitApp();},false);
         app.css({'height':mainHeight});
         hammertime.on("tap",function(){

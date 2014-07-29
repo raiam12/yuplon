@@ -1,5 +1,7 @@
 $(function(){
-        (function($,dom){
+
+    (function($,dom){
+    
         document.addEventListener("touchstart",function(){},false);
             var mainHeight =$(dom).height()
                 app = $(".app"),
@@ -41,7 +43,7 @@ $(function(){
                     support = Hammer(goToSupport,{swipe_max_touches:5});
 
                 red.on("tap",function(){
-                       //validateComp(maskElem.val(),container);
+                       validateComp(maskElem.val());
                 });
                 back.on("tap",function(){
                         container.css("-webkit-transform","translate3d(0,0,0)");
@@ -92,22 +94,55 @@ $(function(){
                 });
             })();
          
-            function validateComp(val,elem) {
-         
-                var isValid = true,
-                    resultElem = $(".comprobantes ul li");
-                if (isValid) {
-                    resultElem.html(val);
-                    elem.css("-webkit-transform","translate3d(-33.3333%,0,0)");
-                    setTimeout(function(){
-                               alert("Comprobante ingresado correctamente");
-                    },1000);
+            function validateComp(input) {
+                var data = JSON.parse(window.localStorage.getItem("LoginData"));
+                makeAjax("method=coupons&api_key=f8e0edbe19bda77100b82011b9507f0c&user="+data.user+"&pass="+data.pass+"&params[code]="+input,getAjaxResponse);
+            }
+
+            function getAjaxResponse(e){
+                var data = JSON.parse(window.localStorage.getItem("LoginData"));
+                if(e[0].status === "new"){
+                    makeAjax("method=redeem&api_key=f8e0edbe19bda77100b82011b9507f0c&user="+data.user+"&pass="+data.pass+"&coupon="+maskElem.val(),handleRedeemResponse);
+                }else {
+                    show("Este cupón ya ha sido redimido","Error");
                 }
-         
+            }
+
+            function handleRedeemResponse(e){
+                console.debug(e);
+                if(e.code == 4){
+                    show("Los parametros son invalidos","Error");
+                }else{
+                    show("El cupon ha sido redimido","Enhorabuena");
+                    maskElem.val("");
+                }
+
+            }
+
+            function makeAjax (data, callbackF){
+                $.ajax({
+                    url: 'http://www.gn-digital.info/wcfyuplon/',
+                    type: 'GET',
+                    data:data,
+                    crossDomain: true,
+                    dataType: 'jsonp',
+                    jsonpCallback:'callback',
+                    success: function(e) { if(callbackF){callbackF(e);} },
+                    error: function(jqXHR, textStatus, errorThrown ) { console.debug(jqXHR);console.debug(errorThrown); }
+                });
             }
          
             function moveScreen(val){
                 container.css("-webkit-transform","translate3d('" +val+ "'%,0,0)");
+            }
+
+            function show(msg,title){
+                navigator.notification.alert(
+                      msg,  // message
+                      null,         // callback
+                      title,            // title
+                      'Aceptar'                  // buttonName
+                );
             }
          
             
