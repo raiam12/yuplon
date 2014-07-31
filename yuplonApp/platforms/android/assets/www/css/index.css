@@ -80,14 +80,18 @@ h2,span{
 
 .ios .back , .ios .backMenu{
     position: absolute;
-    top: 1.5em;
+    top: 1.4em;
     left: 1.4em;
+}
+
+.ios header {
+    margin-top:20px;
 }
 
 .menu-button {
     position: absolute;
     z-index: 1111111;
-    top: 1em;
+    top: 0.8em;
     left: 0.5em;
     height: 2em;
     width: 2em;
@@ -122,8 +126,16 @@ h2,span{
 }
 
 .scan {
-	float: right;
-	margin: -6% 2% 0 0;
+    font-weight:normal;
+    overflow:visible;
+    text-align:center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height:100%;
 }
 
 .Redimir, .RedimirNuevo, .Cerrar{
@@ -231,13 +243,10 @@ h1 {
     font-weight:normal;
     overflow:visible;
     text-align:center;
-    display: -webkit-box; display: -moz-box;
-    display: -ms-flexbox;
+    display: -webkit-box;
     display: -webkit-flex;
     display: flex;
-    
-    -webkit-box-align: center; -moz-box-align: center;
-    -ms-flex-align: center;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     align-items: center;
     height:100%;
@@ -268,18 +277,14 @@ header {
 	width: 100%;
 	height: 5.5em;
     display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     
-    -webkit-box-align: center; -moz-box-align: center;
-    -ms-flex-align: center;
+    -webkit-box-align: center;
     -webkit-align-items: center;
     align-items: center;
     
-    -webkit-box-pack: center; -moz-box-pack: center;
-    -ms-flex-pack: center;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
 }

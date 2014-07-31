@@ -77,8 +77,23 @@ $(function(){
                 scan.on("tap",function(){
                         cordova.plugins.barcodeScanner.scan(
                           function (result) {
-                            $('.mask').val(result.text);
-                            $('.mask').mask('ZZ-ZZZZZ-ZZZ-ZZ',{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
+                            var maskE ='ZZ-ZZZZZ-ZZZ-ZZ';
+                            var text = result.text.split('.');
+                            var string ='';
+                            for(var x = 0;x<text.length;x++){
+                                string+= text[x];
+                            }
+
+                            if(string.length <= 11){
+                                maskE = 'Z-ZZZZZ-ZZZ-ZZ';
+                            } else if(string.length ==12){
+                                maskE = 'ZZ-ZZZZZ-ZZZ-ZZ';
+                            } else {
+                                maskE = 'ZZZ-ZZZZZ-ZZZ-ZZ'
+                            }
+                            $('.mask').mask(maskE,{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
+                            $('.mask').val(string);
+                            $('.mask').mask(maskE,{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
                             
                              /* alert("We got a barcode\n" +
                                     "Result: " + result.text + "\n" +
