@@ -16,7 +16,9 @@ $(function(){
                 gotoUser = $(".menu-list .first")[0],
                 goToSupport = $(".menu-list .last")[0],
                 backMenuSec = $(".backSupport")[0],
-                html = $("html");
+                html = $("html"),
+                loading= $(".loading"),
+                blocker = $(".blocker");
 
             backAndroid = function(){
                 if(html.hasClass("menu-opened")){
@@ -107,6 +109,21 @@ $(function(){
                     show("Este cupón ya ha sido redimido","Error");
                 }
             }
+            function getAjaxResponse(e){
+                var data = JSON.parse(window.localStorage.getItem("LoginData"));
+                var e = JSON.parse(JSON.stringify(e));
+                if(e[0] == undefined ){
+                    if(e.code == 5){
+                        show("El código es inválido","Error");
+                    }
+                } else {
+                    if(e[0].status === "new"){
+                        makeAjax("method=redeem&api_key=f8e0edbe19bda77100b82011b9507f0c&user="+data.user+"&pass="+data.pass+"&coupon="+maskElem.val(),handleRedeemResponse);
+                    }else {
+                        show("Este cupón ya ha sido redimido","Error");
+                    }
+                }
+            }
 
             function handleRedeemResponse(e){
                 console.debug(e);
@@ -127,6 +144,8 @@ $(function(){
                     crossDomain: true,
                     dataType: 'jsonp',
                     jsonpCallback:'callback',
+                    beforeSend:function(){loading.show();blocker.show();},
+                    complete:function(){loading.hide();blocker.hide();},
                     success: function(e) { if(callbackF){callbackF(e);} },
                     error: function(jqXHR, textStatus, errorThrown ) { console.debug(jqXHR);console.debug(errorThrown); }
                 });
@@ -137,7 +156,7 @@ $(function(){
             }
 
             function show(msg,title){
-                alert(msg);
+                //alert(msg);
                 navigator.notification.alert(
                       msg,  // message
                       null,         // callback

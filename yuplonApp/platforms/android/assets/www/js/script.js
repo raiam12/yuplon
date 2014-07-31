@@ -23,7 +23,8 @@ $(
         redimir = $(".Redimir")[0],
         user = $(".User"),
         pass = $(".Password"),
-        loading = $(".loading");
+        loading = $(".loading"),
+        blocker = $(".blocker");
 
       var data = null;
 
@@ -73,9 +74,10 @@ $(
             crossDomain: true,
             dataType: 'jsonp',
             jsonpCallback:'callback',
-            beforeSend:function(){loading.show();},
+            beforeSend:function(){loading.show();blocker.show();},
             complete:function(){
                loading.hide();
+               blocker.hide();
             },
             success: function(e) { self.validateLogin(e)},
             error: function(jqXHR, textStatus, errorThrown ) { console.debug(jqXHR);console.debug(errorThrown); }
