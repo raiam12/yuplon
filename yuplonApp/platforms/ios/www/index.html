@@ -48,13 +48,23 @@
 	        	<button class="Redimir">Iniciar Sesión</button>
         	</div>
 	    </div>
-        
+        <div class="blocker"></div>
         <div class="loading"></div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript">
             app.initialize();
+            app.initialize();
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) ){
+                $('body').addClass("ios");
+                
+            }else if( userAgent.match( /Android/i ) ){
+                $('body').addClass("android");
+            }else {
+                console.log("Not Found");
+            }
         </script>
     </body>
 </html>
