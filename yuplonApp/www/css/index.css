@@ -162,7 +162,7 @@ h2,span{
 }
 .login{
 	text-align:center;
-	margin-top: 30%;
+	margin-top: 10%;
 }
 .inputs, .comprobantes ul{
 	margin	: 8% 0 0;
@@ -224,7 +224,7 @@ h2,span{
 }
 
 .inputs hr {
-	width: 96%;
+	width: 85%;
 	margin: 0 auto;
 }
 
