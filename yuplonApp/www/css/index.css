@@ -88,28 +88,45 @@ h2,span{
     margin-top:20px;
 }
 
+.menuContainer {
+    display: inline-block;
+    position: relative;
+    padding: 2rem .5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    opacity: .8;
+    text-align:center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-grow:20;
+    flex-grow:20;
+}
 .menu-button {
-    position: absolute;
-    z-index: 1111111;
-    top: 0.8em;
-    left: 0.5em;
-    height: 2em;
-    width: 2em;
-    box-sizing: border-box;
-    padding: 0;
+    position: relative;
+    width: 2rem;
+    height: .3125rem;
+    background: #719721;
+    border-radius: 2.5rem;
+    display: block;
 }
 
-.menu-button:before {
-    content: '';
+.menu-button:before ,.menu-button:after{
     display: block;
-    height: 2em;
-    width: 2em;
-    background-color: #000;
-    -webkit-mask-position: 50% 50%;
-    -webkit-mask-size: 90% 90%;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><rect x="25.833" y="20" width="64.167" height="7.666"/><rect x="25.833" y="46.136" width="64.167" height="7.667"/><rect x="25.833" y="72.271" width="64.167" height="7.666"/><rect x="9.833" y="20" width="7.667" height="7.666"/><rect x="9.833" y="46" width="7.667" height="7.666"/><rect x="9.833" y="72.271" width="7.667" height="7.666"/></svg>');
+    content: "";
+    height: .3125rem;
+    width: 2rem;
+    background: #719721;
+    position: relative;
+    z-index: -1;
+    border-radius: 1rem;
 }
+.menu-button:before {top: .6rem;}
+
+.menu-button:after {top: -.9rem;}
 
 .ios .back:after, .ios .backMenu:after{
     border: 3px solid #719721;
@@ -136,6 +153,9 @@ h2,span{
     -webkit-align-items: center;
     align-items: center;
     height:100%;
+    -webkit-flex-grow:2;
+    flex-grow:2;
+
 }
 
 .Redimir, .RedimirNuevo, .Cerrar{
@@ -250,6 +270,12 @@ h1 {
     -webkit-align-items: center;
     align-items: center;
     height:100%;
+    
+}
+
+.scanning h1 {
+    -webkit-flex-grow:7;
+    flex-grow:7;
 }
 
 /*****************************************************************/
