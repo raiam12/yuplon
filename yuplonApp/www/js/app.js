@@ -102,8 +102,20 @@ $(function(){
                        );
 
                 });
-                goToIndex.on("touchstart",function(){
-                        window.location.href="index.html"
+                goToIndex.on("touchstart",function(e){
+                    var els = $(e.target.parentElement).find("loading"),
+                        els2 = $(e.target.parentElement).find("blocker");
+
+                        els.show();
+                        els2.show();
+                    setTimeout(function(){
+                        els.hide();
+                        els2.hide();
+                        window.location.href="index.html";
+                    },1500);
+                    loading.show();blocker.show();
+                        console.debug(e.target.parentElement);
+                        //
                 });
             })();
          

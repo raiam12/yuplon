@@ -163,12 +163,13 @@ h2,span{
 	bottom: 5%;
 	right: 5%;
 	width: 90%;
-	height: 8%;
+	height: 10%;
 	background: #719721;
 	color: #FFF;
 	border:none;
 	outline:none;
 	font-size:1.8em;
+    border-radius: 6px;
 }
 
 .Splash{
@@ -244,8 +245,9 @@ h2,span{
 }
 
 .inputs hr {
-	width: 85%;
+	width: 95%;
 	margin: 0 auto;
+    border-bottom: 0;
 }
 
 /* Landscape layout (with min-width) */
