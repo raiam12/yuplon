@@ -429,3 +429,7 @@ header h1 {
     left: 0;
     display: none;
 }
+.menu-list a{
+    text-decoration: none;
+    color:#000;
+}
