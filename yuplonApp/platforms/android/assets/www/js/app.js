@@ -6,16 +6,16 @@ $(function(){
             var mainHeight =$(dom).height()
                 app = $(".app"),
                 container = $(".containerIndex"),
-                redimir = $(".Redimir")[0],
-                backButton = $(".back")[0],
-                scanButton = $(".scan")[0];
+                redimir = $(".Redimir"),
+                backButton = $(".back"),
+                scanButton = $(".scan");
                 maskElem = $(".mask"),
-                goToMenu = $(".menu-button")[0],
-                goToIndex = $(".Cerrar")[0],
-                backMen = $(".backMenu")[0],
-                gotoUser = $(".menu-list .first")[0],
-                goToSupport = $(".menu-list .last")[0],
-                backMenuSec = $(".backSupport")[0],
+                goToMenu = $(".menu-button"),
+                goToIndex = $(".Cerrar"),
+                backMen = $(".backMenu"),
+                gotoUser = $(".menu-list .first"),
+                goToSupport = $(".menu-list .last"),
+                backMenuSec = $(".backSupport"),
                 html = $("html"),
                 loading= $(".loading"),
                 blocker = $(".blocker");
@@ -34,33 +34,24 @@ $(function(){
             bindEvents =(function(){
                 app.css({'height':mainHeight});
                 $('.mask').mask('ZZ-ZZZZZ-ZZZ-ZZ',{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
-                var red = Hammer(redimir,{swipe_max_touches:5}),
-                    back = Hammer(backButton,{swipe_max_touches:5}),
-                    goMenu = Hammer(goToMenu,{swipe_max_touches:5}),
-                    scan = Hammer(scanButton,{swipe_max_touches:5}),
-                    close = Hammer(goToIndex,{swipe_max_touches:5}),
-                    men = Hammer(backMen,{swipe_max_touches:5}),
-                    menSec = Hammer(backMenuSec,{swipe_max_touches:5}),
-                    user = Hammer(gotoUser,{swipe_max_touches:5}),
-                    support = Hammer(goToSupport,{swipe_max_touches:5});
-
-                red.on("tap",function(){
+               
+                redimir.on("touchstart",function(){
                        validateComp(maskElem.val());
                 });
-                back.on("tap",function(){
+                backButton.on("touchstart",function(){
                         container.css("-webkit-transform","translate3d(0,0,0)");
                 });
-                goMenu.on("tap",function(){
+                goToMenu.on("touchstart",function(){
                         container.css("-webkit-transform","translate3d(-33.3333%,0,0)");
                         html.removeClass().addClass("menu-opened");
                 });
-                men.on("tap",function(){
+                backMen.on("touchstart",function(){
                         container.css("-webkit-transform","translate3d(-33.3333%,0,0)");
                 });
-                menSec.on("tap",function(){
+                backMenuSec.on("touchstart",function(){
                         container.css("-webkit-transform","translate3d(-33.3333%,0,0)");
                 });
-                user.on("tap",function(){
+                gotoUser.on("touchstart",function(){
                         var data = JSON.parse(window.localStorage.getItem("LoginData"));
                         $(".user").text(data.user);
                         $(".user-window").show();
@@ -68,13 +59,13 @@ $(function(){
                         html.removeClass().addClass("user-opened");
 
                 });
-                support.on("tap",function(){
+                goToSupport.on("touchstart",function(){
                         $(".user-window").hide();
                         container.css("-webkit-transform","translate3d(-66.6666%,0,0)");
                         html.removeClass().addClass("support-opened");
 
                 });
-                scan.on("tap",function(){
+                scanButton.on("touchstart",function(){
                         cordova.plugins.barcodeScanner.scan(
                           function (result) {
                             var maskE ='ZZ-ZZZZZ-ZZZ-ZZ';
@@ -101,12 +92,12 @@ $(function(){
                                     "Cancelled: " + result.cancelled);*/
                           }, 
                           function (error) {
-                              alert("Hubo un problema al escanear");
+                              show("Hubo un problema al escanear","Error");
                           }
                        );
 
                 });
-                close.on("tap",function(){
+                goToIndex.on("touchstart",function(){
                         window.location.href="index.html"
                 });
             })();
@@ -145,7 +136,7 @@ $(function(){
                 if(e.code == 4){
                     show("Los parametros son invalidos","Error");
                 }else{
-                    show("El cupon ha sido redimido","Enhorabuena");
+                    show("Comprobante Ingresado Correctamente","Enhorabuena");
                     maskElem.val("");
                 }
 
