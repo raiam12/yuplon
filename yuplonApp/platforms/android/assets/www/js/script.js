@@ -70,7 +70,7 @@ $(
             type: 'GET',
             data:'method=login&api_key='+api_key+'&user='+user.val()+'&pass='+pass.val(),
             crossDomain: true,
-            timeout:7000,
+            timeout:10000,
             dataType: 'jsonp',
             jsonpCallback:'callback',
             beforeSend:function(){loading.show();blocker.show();},
