@@ -167,10 +167,11 @@ $(function(){
                     crossDomain: true,
                     dataType: 'jsonp',
                     jsonpCallback:'callback',
+                    timeout:10000,
                     beforeSend:function(){loading.show();blocker.show();},
                     complete:function(){loading.hide();blocker.hide();},
                     success: function(e) { if(callbackF){callbackF(e);} },
-                    error: function(jqXHR, textStatus, errorThrown ) { console.debug(jqXHR);console.debug(errorThrown); }
+                    error: function(jqXHR, textStatus, errorThrown ) { loading.hide();blocker.hide();show("Revisa la conexión a Internet","Error"); }
                 });
             }
          

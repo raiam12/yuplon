@@ -110,8 +110,8 @@ h2,span{
     -webkit-box-align: center;
     -webkit-align-items: center;
     align-items: center;
-    -webkit-flex-grow:20;
-    flex-grow:20;
+    -webkit-flex-grow:10;
+    flex-grow:10;
 }
 .menu-button {
     position: relative;

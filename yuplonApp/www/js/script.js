@@ -20,7 +20,7 @@ $(
       var mainHeight = $(dom).height()
         app = $(".app"),
         container = $(".containerIndex"),
-        redimir = $(".Redimir")[0],
+        redimir = $(".Redimir"),
         user = $(".User"),
         pass = $(".Password"),
         loading = $(".loading"),
@@ -40,14 +40,12 @@ $(
 
       bindEvents = (function(){
         var self = this;
-        var hammertime = Hammer(redimir,{swipe_max_touches:5});
-
         /**
          * Event listener for internet connection
          */
         document.addEventListener("backbutton",function(){navigator.app.exitApp();},false);
         app.css({'height':mainHeight});
-        hammertime.on("tap",function(){
+        redimir.on("touchstart",function(){
           if(user.val() === "" || pass.val() === ""){
             navigator.notification.alert(
               'Debes de ingresar todos los datos!',  // message
@@ -72,6 +70,7 @@ $(
             type: 'GET',
             data:'method=login&api_key='+api_key+'&user='+user.val()+'&pass='+pass.val(),
             crossDomain: true,
+            timeout:10000,
             dataType: 'jsonp',
             jsonpCallback:'callback',
             beforeSend:function(){loading.show();blocker.show();},
@@ -80,10 +79,26 @@ $(
                blocker.hide();
             },
             success: function(e) { self.validateLogin(e)},
-            error: function(jqXHR, textStatus, errorThrown ) { console.debug(jqXHR);console.debug(errorThrown); }
+            error: function(jqXHR, textStatus, errorThrown ) {
+              show("Revisa la conexión a Internet","Error");
+                loading.hide();
+                blocker.hide();
+            }
         });
       }
 
+      /**
+       * validate login credentials
+       * @param {data} Call back response
+       */
+      function show(msg, title){
+           navigator.notification.alert(
+              msg,  // message
+              null,         // callback
+              title,            // title
+              'Aceptar'                  // buttonName
+          );
+      }
       /**
        * validate login credentials
        * @param {data} Call back response
