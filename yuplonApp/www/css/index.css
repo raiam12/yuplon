@@ -1,5 +1,5 @@
 /*
- * Licensed to the Apache Software Foundation (ASF) under one
+ * Licensed to the Apache Software Foundati\on (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
  * regarding copyright ownership.  The ASF licenses this file
@@ -50,7 +50,7 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:120%;
     height:100%;
     margin:0px;
     padding:0px;
@@ -96,7 +96,7 @@ h2,span{
     margin-top:20px;
 }
 
-.menuContainer {
+/*.menuContainer {
     display: inline-block;
     position: relative;
     padding: 2rem .5rem;
@@ -112,7 +112,16 @@ h2,span{
     align-items: center;
     -webkit-flex-grow:10;
     flex-grow:10;
+}*/
+.menuContainer {
+    position: relative;
+    padding: 2.6em 2em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    opacity: .8;
+    text-align: center;
 }
+
 .menu-button {
     position: relative;
     width: 2rem;
@@ -151,7 +160,7 @@ h2,span{
 }
 
 .scan {
-    font-weight:normal;
+    /*font-weight:normal;
     overflow:visible;
     text-align:center;
     display: -webkit-box;
@@ -162,7 +171,14 @@ h2,span{
     align-items: center;
     height:100%;
     -webkit-flex-grow:2;
-    flex-grow:2;
+    flex-grow:2;*/
+    font-weight: normal;
+    overflow: visible;
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+    display: table-cell;
+    width:30%;
 
 }
 
@@ -223,13 +239,18 @@ h2,span{
     float:right;
 }
 
+.support-window .login h2 {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .menu-list li.first:after, .menu-list li.last:after {
     border: 3px solid #719721;
     border-left: 3px solid transparent;
     border-bottom: 3px solid transparent;
     content: " ";
     height: 0.3em;
-    left: 16em;
+    right: 1em;
     position: absolute;
     top: 1.3em;
     -webkit-transform: rotate(45deg);
@@ -269,7 +290,7 @@ h2,span{
     }
 }
 
-h1 {
+.Menu h1 {
     font-size:1.7em;
     font-weight:normal;
     overflow:visible;
@@ -283,6 +304,15 @@ h1 {
     height:100%;
     
 }
+.Menu2 h1 {font-size: 1.7em;
+font-weight: normal;
+overflow: visible;
+text-align: center;
+height: 100%;
+display: table-cell;
+width: 50%;
+vertical-align: middle;}
+
 
 .scanning h1 {
     -webkit-flex-grow:7;
@@ -308,7 +338,7 @@ h1 {
 }*/
 
 
-header {
+header.Menu {
 	background: #FFFFFF;
 	position: relative;
 	width: 100%;
@@ -324,6 +354,17 @@ header {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
+}
+
+header.Menu2{
+    background: #FFFFFF;
+    position: relative;
+    width: 100%;
+    height: 5.5em;
+    position: relative;
+    height: 5.5em;
+    width: 100%;
+    display: table;
 }
 
 header h1 {
@@ -398,7 +439,7 @@ header h1 {
     width: 100px;
     height: 100px;
     z-index: 2;
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
@@ -444,4 +485,23 @@ header h1 {
 .menu-list a{
     text-decoration: none;
     color:#000;
+}
+
+.menu-contenedor{
+    width: 25%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    body {
+        font-size: 12px;
+    }
+    .menuContainer {
+    padding: 2.6em 2em 2.6em 1em;}
+
+}
+@media screen and (-webkit-device-pixel-ratio:1.5){
+    .mask-sharp {
+        top:5%;
+    }
+
 }

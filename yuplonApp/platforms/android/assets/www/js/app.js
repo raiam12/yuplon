@@ -10,7 +10,7 @@ $(function(){
                 backButton = $(".back"),
                 scanButton = $(".scan");
                 maskElem = $(".mask"),
-                goToMenu = $(".menu-button"),
+                goToMenu = $(".menu-contenedor"),
                 goToIndex = $(".Cerrar"),
                 backMen = $(".backMenu"),
                 gotoUser = $(".menu-list .first"),
