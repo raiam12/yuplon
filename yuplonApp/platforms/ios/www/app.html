@@ -36,10 +36,16 @@
     <body>
 	    <div class="containerIndex scan-window">
 	    	<div class="app scanning">
-	        	<header class="Menu">
-                    <div class="menuContainer"><span class="menu-button"></span></div>
-                    <h1>Comprobantes</h1>
-	        		<span class="scan">Escanear</span>
+	        	<header class="Menu2">
+                    <div style="display: table-row;">
+                        <div class="menu-contenedor" style="display: table-cell;">
+                            <div class="menuContainer" style="width: 30%;">
+                                <span class="menu-button"></span>
+                            </div>
+                        </div>
+                        <h1>Comprobantes</h1>
+                        <span class="scan">Escanear</span>
+                    </div>
 	        	</header>
 	            <div class="login">
 	            	<h2>Ingrese el número de comprobante</h2>
@@ -54,8 +60,10 @@
             </div>
             <div class="app menu-window">
                 <header class="Menu">
-                    <h1>Menú</h1>
+                    <div class="simulateBack"></div>
                     <span class="back">Atrás</span>
+                    <h1>Menú</h1>
+                    
                 </header>
                 <div class="login">
                     <div class="menu-list">
@@ -67,11 +75,15 @@
                     </div>
                 </div>
                 <button class="Cerrar">Cerrar Sesión</button>
+                <div class="blocker"></div>
+                <div class="loading" style="position:absolute;"></div>
             </div>
             <div class="app user-window">
                 <header class="Menu">
+                    <div class="simulateBackMenu"></div>
+                     <span class="backMenu">Atrás</span>
                     <h1>Usuario</h1>
-                    <span class="backMenu">Atrás</span>
+                    
                 </header>
                 <div class="login">
                     <div class="menu-list">
@@ -82,18 +94,21 @@
                     </div>
                 </div>
                 <button class="Cerrar">Cerrar Sesión</button>
+                <div class="blocker"></div>
+                <div class="loading" style="position:absolute;"></div>
             </div>
             <div class="app support-window">
                 <header class="Menu">
-                    <h1>Soporte</h1>
+                    <div class="simulateBackMenu"></div>
                     <span class="backMenu backSupport">Atrás</span>
+                    <h1>Soporte</h1>
                 </header>
                 <div class="login">
                     <h2>¿Pregunta? Contacta nuestro servicio de atención al cliente</h2>
                     <div class="menu-list">
                         <ul>
-                            <li class="">Correo: <span>info@yuplon.com</span></li>
-                            <li class="">Tel: <span>2545-5242</span></li>
+                            <a href="mailto:info@yuplon.com"><li class="">Correo: <span style="text-align: left;width: 75%;color:blue;">info@yuplon.com</span></li></a>
+                            <a href="tel:25455242"><li class="">Tel: <span style="text-align: left;width: 85%;color:blue;">2545-5242</span></li></a>
                         </ul>
                     </div>
                 </div>
