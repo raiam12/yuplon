@@ -75,9 +75,8 @@ h2,span{
 }
 
 .scanning, .view-window, .menu-window,.user-window, .support-window{
-	width:33.3333%;
+	width:33.33%;
 }
-
 .scan-window {
 	width:300% !important;
 }
@@ -94,6 +93,15 @@ h2,span{
 
 .ios header {
     margin-top:20px;
+}
+
+.ios .simulateBack, .ios .simulateBackMenu{
+    height: 100%;
+    width: 25%;
+    position: absolute;
+    left: 0;
+    content: " ";
+    z-index: 2;
 }
 
 /*.menuContainer {
@@ -228,6 +236,10 @@ h2,span{
     padding:4% 3%;
     text-align:left;
     position:relative;
+}
+
+.ios .menu-list li {
+    width:94.5%;
 }
 
 .menu-list li.user, .menu-list li.pass {

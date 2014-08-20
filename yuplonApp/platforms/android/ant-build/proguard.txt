@@ -18,5 +18,5 @@
 -keep class com.google.zxing.client.android.pref.BSPlusPreference { <init>(...); }
 
 # view AndroidManifest.xml #generated:6
--keep class com.nacion.yuplon.Yuplon { <init>(...); }
+-keep class com.nacion.comercios.Yuplon { <init>(...); }
 

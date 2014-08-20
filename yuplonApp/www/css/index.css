@@ -75,9 +75,8 @@ h2,span{
 }
 
 .scanning, .view-window, .menu-window,.user-window, .support-window{
-	width:33.4%;
+	width:33.33%;
 }
-
 .scan-window {
 	width:300% !important;
 }

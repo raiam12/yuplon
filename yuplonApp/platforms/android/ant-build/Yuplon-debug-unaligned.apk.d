@@ -1,5 +1,5 @@
-C:\AndroidApps\yuplon5.0\yuplon\yuplonApp\platforms\android\ant-build\Yuplon-debug-unaligned.apk : \
-C:\AndroidApps\yuplon5.0\yuplon\yuplonApp\platforms\android\ant-build\Yuplon.ap_ \
-C:\AndroidApps\yuplon5.0\yuplon\yuplonApp\platforms\android\ant-build\classes.dex \
-C:\AndroidApps\yuplon5.0\yuplon\yuplonApp\platforms\android\CordovaLib\ant-build\classes.jar \
-C:\AndroidApps\yuplon5.0\yuplon\yuplonApp\platforms\android\libs\com.google.zxing.client.android.captureactivity.jar \
+C:\AndroidApps\yuplon6.0\yuplon\yuplonApp\platforms\android\ant-build\Yuplon-debug-unaligned.apk : \
+C:\AndroidApps\yuplon6.0\yuplon\yuplonApp\platforms\android\ant-build\Yuplon.ap_ \
+C:\AndroidApps\yuplon6.0\yuplon\yuplonApp\platforms\android\ant-build\classes.dex \
+C:\AndroidApps\yuplon6.0\yuplon\yuplonApp\platforms\android\CordovaLib\ant-build\classes.jar \
+C:\AndroidApps\yuplon6.0\yuplon\yuplonApp\platforms\android\libs\com.google.zxing.client.android.captureactivity.jar \
