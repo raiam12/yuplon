@@ -15,6 +15,10 @@
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"GAPlugin\"><param name=\"android-package\" value=\"com.adobe.plugins.GAPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -541,6 +545,9 @@
         },
         "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.nacion.yuplon"
+        },
+        "com.adobe.plugins.GAPlugin": {
+            "PACKAGE_NAME": "com.nacion.comercios"
         }
     },
     "dependent_plugins": {}
