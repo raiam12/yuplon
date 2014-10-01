@@ -43,6 +43,13 @@
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
+        <receiver android:exported="false" android:name="com.parse.ParsePushBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.push.intent.RECEIVE" />
+                <action android:name="com.push.intent.DELETE" />
+                <action android:name="com.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
         <receiver android:name="com.parse.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />

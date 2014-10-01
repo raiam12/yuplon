@@ -32,6 +32,7 @@ public class Yuplon extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         Parse.initialize(this, "ZL1jflFnRI4vmDsbDyWanACu6uIcehUgd5ih7jQx", "w68xOk7FYL0SXxtI1n2RVfGZhVKsG4GgxMT8ezVb");
+        ParseInstallation.getCurrentInstallation().saveInBackground();
         PushService.setDefaultPushCallback(this, Yuplon.class);
         super.onCreate(savedInstanceState);
         super.init();
