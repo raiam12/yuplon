@@ -64,8 +64,8 @@
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    [Parse setApplicationId:@"RVYQh3ZtYWyCXq4pirsiE2HT7rjo58NNsdcHcD7R"
-                  clientKey:@"1lPb3XYShqHb1XN6V0JpLiytcdSmmVUvoUETKQzF"];
+    [Parse setApplicationId:@"3X0eB4KAFh7NvQoCs2TTkuzATYAelHmaMeYNN0dq"
+                  clientKey:@"TKI5P0JXadBdZo1BWk2bfeVhYZvVGzn56gKzrbpa"];
     
     // Register for Push Notitications, if running iOS 8
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
