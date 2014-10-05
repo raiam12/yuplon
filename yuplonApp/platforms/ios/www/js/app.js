@@ -33,12 +33,12 @@ $(function(){
 
             bindEvents =(function(){
                 app.css({'height':mainHeight});
-                $('.mask').mask('ZZ-ZZZZZ-ZZZ-ZZ',{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
+                $('.mask').mask('ZZZ-ZZZZZ-ZZZ-ZZ',{placeholder:"XXX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
                
                 redimir.on("touchstart",function(){
 
                     if(maskElem.val()==""){
-                        show("Ingresé un código!","Error");
+                        show("Ingrese un código!","Error");
                     } else {
                        validateComp(maskElem.val());
                     }
@@ -76,20 +76,23 @@ $(function(){
                             var maskE ='ZZ-ZZZZZ-ZZZ-ZZ';
                             var text = result.text.split('.');
                             var string ='';
+                            var placeholderH="XXX-XXXXX-XXX-XX";
                             for(var x = 0;x<text.length;x++){
                                 string+= text[x];
                             }
 
-                            if(string.length <= 11){
+                            if(string.length == 11){
                                 maskE = 'Z-ZZZZZ-ZZZ-ZZ';
+                                placeholderH="X-XXXXX-XXX-XX";
                             } else if(string.length ==12){
                                 maskE = 'ZZ-ZZZZZ-ZZZ-ZZ';
+                                placeholderH="XX-XXXXX-XXX-XX";
                             } else {
                                 maskE = 'ZZZ-ZZZZZ-ZZZ-ZZ'
                             }
-                            $('.mask').mask(maskE,{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
+                            $('.mask').mask(maskE,{placeholder:placeholderH,translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
                             $('.mask').val(string);
-                            $('.mask').mask(maskE,{placeholder:"XX-XXXXX-XXX-XX",translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
+                            $('.mask').mask(maskE,{placeholder:placeholderH,translation:{'Z':{pattern:/^[a-zA-Z0-9]+$/,optional:false}}});
                             
                              /* alert("We got a barcode\n" +
                                     "Result: " + result.text + "\n" +

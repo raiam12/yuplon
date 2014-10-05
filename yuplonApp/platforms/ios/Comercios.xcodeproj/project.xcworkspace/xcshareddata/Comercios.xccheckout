@@ -10,29 +10,29 @@
 	<string>Comercios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>10F42293-D40F-4EFE-86BD-27254B53F023</key>
+		<key>8B496B3EC179FAFC30A914F3C2A72E2A467C9C43</key>
 		<string>https://github.com/raiam12/yuplon.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>yuplonApp/platforms/ios/Comercios.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>10F42293-D40F-4EFE-86BD-27254B53F023</key>
+		<key>8B496B3EC179FAFC30A914F3C2A72E2A467C9C43</key>
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/raiam12/yuplon.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>10F42293-D40F-4EFE-86BD-27254B53F023</string>
+	<string>8B496B3EC179FAFC30A914F3C2A72E2A467C9C43</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>10F42293-D40F-4EFE-86BD-27254B53F023</string>
+			<string>8B496B3EC179FAFC30A914F3C2A72E2A467C9C43</string>
 			<key>IDESourceControlWCCName</key>
 			<string>yuplon</string>
 		</dict>

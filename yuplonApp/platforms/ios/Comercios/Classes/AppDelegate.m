@@ -27,7 +27,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-
+#import "Parse/Parse.h"
 #import <Cordova/CDVPlugin.h>
 
 @implementation AppDelegate
@@ -64,6 +64,25 @@
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    [Parse setApplicationId:@"RVYQh3ZtYWyCXq4pirsiE2HT7rjo58NNsdcHcD7R"
+                  clientKey:@"1lPb3XYShqHb1XN6V0JpLiytcdSmmVUvoUETKQzF"];
+    
+    // Register for Push Notitications, if running iOS 8
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                        UIUserNotificationTypeBadge |
+                                                        UIUserNotificationTypeSound);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                                 categories:nil];
+        [application registerUserNotificationSettings:settings];
+        [application registerForRemoteNotifications];
+    } else {
+        // Register for Push Notifications before iOS 8
+        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                         UIRemoteNotificationTypeAlert |
+                                                         UIRemoteNotificationTypeSound)];
+    }
+    
 
 #if __has_feature(objc_arc)
         self.window = [[UIWindow alloc] initWithFrame:screenBounds];
@@ -87,6 +106,8 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+
 
     return YES;
 }
@@ -120,13 +141,18 @@
 - (void)                                application:(UIApplication *)application
    didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    currentInstallation.channels = @[ @"global" ];
+    [currentInstallation saveInBackground];
     // re-post ( broadcast )
     NSString* token = [[[[deviceToken description]
                          stringByReplacingOccurrencesOfString: @"<" withString: @""]
                         stringByReplacingOccurrencesOfString: @">" withString: @""]
                        stringByReplacingOccurrencesOfString: @" " withString: @""];
-
     [[NSNotificationCenter defaultCenter] postNotificationName:CDVRemoteNotification object:token];
+    
 }
 
 - (void)                                 application:(UIApplication *)application
@@ -134,6 +160,10 @@
 {
     // re-post ( broadcast )
     [[NSNotificationCenter defaultCenter] postNotificationName:CDVRemoteNotificationError object:error];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    [PFPush handlePush:userInfo];
 }
 
 - (NSUInteger)application:(UIApplication*)application supportedInterfaceOrientationsForWindow:(UIWindow*)window

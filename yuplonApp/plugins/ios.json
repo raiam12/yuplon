@@ -43,18 +43,8 @@
                             "count": 1
                         }
                     ],
-                    "CoreData.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "SystemConfiguration.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ]
+                    "CoreData.framework": [],
+                    "SystemConfiguration.framework": []
                 }
             },
             "config.xml": {
@@ -66,10 +56,6 @@
                         },
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"GAPlugin\"><param name=\"ios-package\" value=\"GAPlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -83,9 +69,6 @@
         },
         "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.nacion.yuplon"
-        },
-        "com.adobe.plugins.GAPlugin": {
-            "PACKAGE_NAME": "com.yuplon.comercios"
         }
     },
     "dependent_plugins": {}

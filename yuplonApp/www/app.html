@@ -136,15 +136,16 @@
               gaPlugin.init(successHandler, errorHandler, uat, 10);    
 
               $('.Redimir').on('touchstart',function(){
+                               alert("click");
                 gaPlugin.trackEvent( successHandler, errorHandler, "Redimir", "Evento para Redimir", "Evento para Redimir un cupón", 1);
               });    
             }
             function successHandler(result){
-              console.log('Analitycs Sent: '+result);
+              alert('Analitycs Sent: '+result);
             }
 
             function errorHandler(error){
-              console.log('Analitycs Sent with Issue: '+error);
+              alert('Analitycs Sent with Issue: '+error);
             }
 
             app.initialize();
