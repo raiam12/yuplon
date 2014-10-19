@@ -43,6 +43,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="UniversalAnalytics" value="UniversalAnalyticsPlugin" />
     <gap:plugin name="GAPlugin" value="com.adobe.plugins.GAPlugin" />
     <gap:plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
     <gap:plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />

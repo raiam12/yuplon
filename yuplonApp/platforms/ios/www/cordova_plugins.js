@@ -63,6 +63,13 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.barcodeScanner"
         ]
+    },
+    {
+        "file": "plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js",
+        "id": "com.danielcwilson.plugins.googleanalytics.UniversalAnalytics",
+        "clobbers": [
+            "analytics"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -72,7 +79,8 @@ module.exports.metadata =
     "org.apache.cordova.network-information": "0.2.14-dev",
     "org.apache.cordova.geolocation": "0.3.11-dev",
     "com.adobe.plugins.GAPlugin": "2.3.1",
-    "com.phonegap.plugins.barcodescanner": "1.2.0"
+    "com.phonegap.plugins.barcodescanner": "1.2.0",
+    "com.danielcwilson.plugins.googleanalytics": "0.6.0"
 }
 // BOTTOM OF METADATA
 });

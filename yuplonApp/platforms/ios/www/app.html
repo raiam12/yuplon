@@ -128,25 +128,12 @@
              * Init when device is ready
              */
             function onDeviceReady(){
-                if($('body').hasClass('ios')){
-                    uat = 'UA-24350837-6';
-                } else {
-                    uat = 'UA-24350837-6';
-                }
-              gaPlugin = window.plugins.gaPlugin;
-              gaPlugin.init(successHandler, errorHandler, uat, 10);    
-
-              $('.Redimir').on('touchstart',function(){
-                gaPlugin.trackEvent( successHandler, errorHandler, "Redimir", "Evento para Redimir", "Evento para Redimir un cupón", 1);
-              });    
+                    analytics.startTrackerWithId('UA-24350837-5');
+                    $('.Redimir').on('touchstart',function(){
+                             analytics.trackEvent('Redimir', 'Redimir Comprobante', 'Evento para Redimir');
+                    });
             }
-            function successHandler(result){
-              alert('Analitycs Sent: '+result);
-            }
-
-            function errorHandler(error){
-              alert('Analitycs Sent with Issue: '+error);
-            }
+        
 
             app.initialize();
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;

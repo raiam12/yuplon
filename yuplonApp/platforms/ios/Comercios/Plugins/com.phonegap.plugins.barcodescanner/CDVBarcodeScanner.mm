@@ -268,7 +268,7 @@ parentViewController:(UIViewController*)parentViewController
 - (void)barcodeScanDone {
     self.capturing = NO;
     [self.captureSession stopRunning];
-    [self.parentViewController dismissModalViewControllerAnimated: YES];
+    [[self parentViewController] dismissViewControllerAnimated:YES completion:nil];
     
     // viewcontroller holding onto a reference to us, release them so they
     // will release us
@@ -280,8 +280,10 @@ parentViewController:(UIViewController*)parentViewController
 
 //--------------------------------------------------------------------------
 - (void)barcodeScanSucceeded:(NSString*)text format:(NSString*)format {
-    [self barcodeScanDone];
-    [self.plugin returnSuccess:text format:format cancelled:FALSE callback:self.callback];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [self barcodeScanDone];
+        [self.plugin returnSuccess:text format:format cancelled:FALSE callback:self.callback];
+    });
 }
 
 //--------------------------------------------------------------------------
@@ -320,7 +322,7 @@ parentViewController:(UIViewController*)parentViewController
     output.alwaysDiscardsLateVideoFrames = YES;
     output.videoSettings = videoOutputSettings;
     
-    [output setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
+    [output setSampleBufferDelegate:self queue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)];
     
     if (![captureSession canSetSessionPreset:AVCaptureSessionPresetMedium]) {
         return @"unable to preset medium quality video capture";
